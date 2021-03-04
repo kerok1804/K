@@ -1,0 +1,50 @@
+{% extends "template.html" %}
+
+{% block conteudo %}
+{% if informacao.films %}
+    <table class="table table-striped table-responsive table-bordered">
+        <thead>
+            <tr>
+                <th>Nome do Objeto:</th>
+                <th>URL:</th>
+                <th>Filmes:</th>
+            </tr>
+        </thead>
+        <tbody>
+            
+            <tr>
+                <td>{{ informacao.name }}</td>
+                <td>{{ informacao.url }}</td>
+                <td>{{ informacao.films }}</td>
+            </tr>
+            
+            
+                        
+        </tbody>
+    </table>
+    {% else %}
+    <table class="table table-striped table-responsive table-bordered">
+        <thead>
+            <tr>
+                <th>Nome do Objeto:</th>
+                <th>Personagens:</th>
+                <th>Naves:</th>
+            </tr>
+        </thead>
+        <tbody>
+            
+            <tr>
+                <td>{{ informacao.title }}</td>
+                <td>{{ informacao.characters }}</td>
+                <td>{{ informacao.starships }}</td>
+            </tr>
+            
+            
+                        
+     
+        </tbody>
+    </table>
+            
+            {% endif %}
+    <a class="btn btn-primary" href="/novo" role="button">Nova Pesquisa</a>
+{% endblock %}
